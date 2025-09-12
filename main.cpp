@@ -13,8 +13,8 @@ void mostrarMenuPrincipal()
 {
     std::cout << "===== TecnoCafe - Menu Principal =====\n";
     std::cout << "1. Calificaciones\n";
-    std::cout << "2. Proximamente....\n";
-    std::cout << "3. Proximamente....\n";
+    std::cout << "2. Encuesta de cine\n";
+    std::cout << "3. Secuencia de numeros ascedentes\n";
     std::cout << "4. Proximamente....\n";
     std::cout << "-1. Salir\n";    std::cout << "Seleccione una opcion: ";
 }
@@ -39,6 +39,7 @@ int main(){
     SetConsoleOutputCP(65001);
     float CantidadNotas;
     int cantidadPersonas;
+    int numero;
 
     int opcion = 0;
     do
@@ -58,6 +59,7 @@ int main(){
               break;
         }
         case 3:{
+            ascedente(numero);
                     break;
         }
         case 4:{

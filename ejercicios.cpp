@@ -4,8 +4,54 @@
 #include <iostream>
 #include "ejercicios.h"
 #include <windows.h> //Para poder permitir los caracteres especiales
+#include <vector> //Para poder hacer listas
+
+void ascedente(int& numero) {
 
 
+    std::cout << "\n ----------Bienvenidos al programa de la secuencia ascedente---------- \n" << std::endl;
+    std::cout << "\n Digite la cantidad de numeros para la secuencia (n): " <<std::endl;
+    std::cin >> numero;
+
+    if (numero == 0) {
+        std::cout << "Se necesita un numero mayor que 0, para iniciar la secuencia!!!" << std::endl;
+        return; // si cumple sigue la secuencia
+    }
+    int numeroAnterior;
+    int NumeroActual;
+    std::vector<int> numerosGuardados;
+
+
+    // Manejar el primer numero separado para poder empezar a comparar
+    std::cout << "Digite el primer numero: " << std::endl;
+    std::cin >> numeroAnterior;
+
+    numerosGuardados.push_back(numeroAnterior);//Guardamos el valor inicial para luego mostrarlo en pantalla , vector es un tipo de
+    // lista donde almacena los numeros, en la secuencia.
+    //Ciclo para pedir el numero siguiente y compara con el anterior para saber si es ascedente
+    for (int i = 1; i < numero; i++) {
+        std::cout << "Digite el numero No: " << i+1 <<std::endl;
+        std::cin >> NumeroActual;
+        if (NumeroActual < numeroAnterior) {
+            std::cout << "\n !Error! El numero que acabas de ingresar no es mayor, que el numero anterior digitado" << NumeroActual;
+            std::cout << "La secuencia se ha roto, intentalo de nuevo";
+            return;
+        }
+        numerosGuardados.push_back(NumeroActual);
+        numeroAnterior = NumeroActual;
+
+
+        }
+    std::cout << "\n ------Proceso terminado-------" << std::endl;
+    std::cout << "\n Felicidades, la lista de los numeros ingresados son en forma ascedente son: " << std::endl;
+    for (int numeros : numerosGuardados) { //Ciclo para recorrer la lista numeroGuardados, donde este almacena los numero digitados
+        //realizados por el usuario.
+        std::cout << numeros << std::endl;
+    }
+
+}
+
+//Funcion para hacer la encuesta del ejercicio 2
 void Encuesta(int& cantidadPersonas){
     // SetConsolo permite los caracteres especiales
     SetConsoleOutputCP(65001);
@@ -16,6 +62,8 @@ void Encuesta(int& cantidadPersonas){
     float SumaCali;
     int rangoEdad;
     int calificacionPerfecta = 0; // Contador para calificacion si es 10
+
+    std::cout << "\n -----Bienvenidos a la encuesta de sastifaccion del cine---------\n";
 
     // Ciclo While que recorre lo que hay dentro de este preguntando la edad y su respectiva calificacion. Termina hasta que edad sea 0.
     while  (true){
@@ -55,7 +103,7 @@ void Encuesta(int& cantidadPersonas){
 
 }
 
-
+// Ejercicio 1 de las calificaciones
 void calificaciones( float& CantidadNotas){
 
 
@@ -68,6 +116,9 @@ void calificaciones( float& CantidadNotas){
     //SumaNotas es un contador que va sumando cada valor dada por el usuario
     float NotaActual;
     float SumaNotas;
+
+    std::cout << "\n -----Bienvenidos al programa de calificaciones de los estudiantes -------\n" << std::endl;
+
     std::cout << "Ingrese la cantidad de estudiantes del curso: " << std::endl;
     //Pide en consola la cantidad de estudiantes.
     std::cin >> CantidadNotas;
