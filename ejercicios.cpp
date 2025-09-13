@@ -43,7 +43,7 @@ void fibonacci() {
 
 //Ejercicio 5--------------------------------------------------------------------------------------------
 /*NOTA : Profesor la verdad hice el mejor intento de hacer este punto, pero no pude encontrar la manera de hacerlo
- *sin ayuda total de la IA, profe si lees esto, porfavor explica este ejercicio bien, no llegue a compreder como se usa,
+ *sin ayuda de la IA, profe si lees esto, porfavor explica este ejercicio bien, no llegue a compreder como se usa,
  *en su totalidad.
  */
 void palabra() {
