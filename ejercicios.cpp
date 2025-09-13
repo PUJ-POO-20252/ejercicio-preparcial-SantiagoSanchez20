@@ -7,7 +7,7 @@
 #include <vector> //Para poder hacer listas
 #include <string>
 
-
+//Ignorar este mensaje, ando configurando el repositorio, por que este fue creado personal y acabo de cambiar de repositorio
 /*
  *REALIZADO POR SANTIAGO SANCHEZ GIRALDO
  */

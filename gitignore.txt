@@ -11,3 +11,4 @@ bin/
 
 #Archivos de registro
 *.log
+#Ignored
