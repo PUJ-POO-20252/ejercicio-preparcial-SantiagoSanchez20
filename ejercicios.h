@@ -1,7 +1,7 @@
 //
 // Created by duque on 10/09/2025.
 //
-
+#include <string>
 #ifndef TRABAJO_PRACTICA_PARCIAL_SANTIAGO_SANCHEZ_EJERCICIOS_H
 #define TRABAJO_PRACTICA_PARCIAL_SANTIAGO_SANCHEZ_EJERCICIOS_H
 
@@ -12,6 +12,8 @@ void ascedente(int& numero);
 void menuPrincipalDescuentos();
 
 void descuentos();
+void palabra();
+void fibonacci();
 
 
 

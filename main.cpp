@@ -11,11 +11,13 @@
 
 void mostrarMenuPrincipal()
 {
-    std::cout << "===== TecnoCafe - Menu Principal =====\n";
+    std::cout << "===== Ejercicios Practicas=====\n";
     std::cout << "1. Calificaciones\n";
     std::cout << "2. Encuesta de cine\n";
     std::cout << "3. Secuencia de numeros ascedentes\n";
-    std::cout << "4. Proximamente....\n";
+    std::cout << "4. Tienda\n";
+    std::cout << "5. Palabra \n";
+    std::cout << "6. Fibonacci\n";
     std::cout << "-1. Salir\n";    std::cout << "Seleccione una opcion: ";
 }
 
@@ -23,9 +25,9 @@ int leerOpcionMenu()
 {
     int opcion;
     std::cin >> opcion;
-    while (opcion < -1 || opcion > 4)
+    while (opcion < -1 || opcion > 6)
     {
-        std::cout << "Opcion invalida. Intente de nuevo (1-4): ";
+        std::cout << "Opcion invalida. Intente de nuevo (1-6): ";
         std::cin.clear();
         std::cin.ignore(10000, '\n');
         std::cin >> opcion;
@@ -65,6 +67,14 @@ int main(){
         case 4:{
                 descuentos();
                 break;
+        }
+                case 5: {
+            palabra();
+            break;
+        }
+            case 6 : {
+            fibonacci();
+            break;
         }
 
         case -1:
