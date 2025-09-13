@@ -6,6 +6,135 @@
 #include <windows.h> //Para poder permitir los caracteres especiales
 #include <vector> //Para poder hacer listas
 
+//Apartado de precios de los productos
+
+const int cafe = 2000;
+const int Avena = 3000;
+const int Leche = 6000;
+
+
+void mostrarOpciones()
+{
+    std::cout << "\nBienvenido al selector de productos escoja un producto porfavor" << std::endl;
+    std::cout << "1.Cafe" << std::endl;
+    std::cout << "2.Avena" << std::endl;
+    std::cout << "3.Cafe" << std::endl;
+    std::cout << "-1. Salir\n";    std::cout << "Seleccione una opcion: ";
+
+
+
+}
+void leerOpcionesProductos()
+{
+    int OpcionProducto;
+    std::cin >> OpcionProducto;
+    while (OpcionProducto < -1 || OpcionProducto > 3)
+    {
+        std::cout << "Opcion invalida. Intente de nuevo (1-4): ";
+        std::cin.clear();
+        std::cin.ignore(10000, '\n');
+        std::cin >> OpcionProducto;
+    }
+}
+
+
+
+
+void menuPrincipalDescuentos() {
+
+    std::cout << "Bienvenidos al apartado de Compra de productos" << std::endl;
+    std::cout << "1. Productos en venta:" << std::endl;
+    std::cout << "2.Total a pagar con descuentos: " << std::endl;
+    std::cout << "-1. Salir\n";    std::cout << "Seleccione una opcion: ";
+}
+
+
+int leerOpcionDescuentos() {
+        int opcion;
+        std::cin >> opcion;
+        while (opcion < -1 || opcion > 4)
+        {
+            std::cout << "Opcion invalida. Intente de nuevo (1-4): ";
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            std::cin >> opcion;
+        }
+        return opcion;
+}
+//Principal de lectura
+void descuentos() {
+    int opcion = 0;
+    int unidadesCafe = 0;
+
+
+    do
+    {
+        menuPrincipalDescuentos();
+        opcion = leerOpcionDescuentos();
+        switch (opcion)
+        {
+        case 1:
+            {
+                int OpcionProducto = 0;
+
+                std::cout << "\nHas seleccionado el Menu de Productos" << std::endl;
+                do {
+                    std::cout << "\nBienvenido al selector de productos escoja un producto porfavor" << std::endl;
+                    std::cout << "1.Cafe" << std::endl;
+                    std::cout << "2.Avena" << std::endl;
+                    std::cout << "3.Leche " << std::endl;
+                    std::cout << "-1. Salir\n";    std::cout << "Seleccione un producto: ";
+                    std::cin >> OpcionProducto;
+                    switch (OpcionProducto)
+                    {
+                    case 1:
+                        {
+                            int cantidadCafe;
+                            std::cout << "\nIngrese la cantidad de unidades de cafe(Unidades pequeños): " << std::endl;
+                            std::cin >> cantidadCafe;
+                            unidadesCafe += cantidadCafe;
+
+
+                        }
+                    case 2:
+                        {
+                            int cantidadAvena;
+                            std::cout << "\nIngrese la cantidad de unidades de leche(Unidades pequeños): " << std::endl;
+                            std::cin >> cantidadAvena;
+                        }
+                    case 3:
+                        {
+                            int cantidadLeche;
+                            std::cout << "\nIngrese la cantidad de unidades de leche(Unidades pequeñas): " << std::endl;
+                            std::cin >> cantidadLeche;
+                        }
+                    case 4:
+                        {
+                            std::cout << "Regresando al menu de productos!!";
+                        }
+
+                    }
+
+                }
+                while (OpcionProducto != -1 );
+            }
+        }
+
+    }
+    while (opcion != -1 );
+
+
+}
+
+
+
+
+
+
+
+
+
+
 void ascedente(int& numero) {
 
 

@@ -9,5 +9,11 @@ void calificaciones(float& CantidadNotas);
 void Encuesta(int& cantidadPersonas);
 void ascedente(int& numero);
 
+void menuPrincipalDescuentos();
+
+void descuentos();
+
+
+
 
 #endif //TRABAJO_PRACTICA_PARCIAL_SANTIAGO_SANCHEZ_EJERCICIOS_H
