@@ -212,9 +212,8 @@ void descuentos() {
                             unidadesLeche+= cantidadLeche;
                             break;
                         }
-
                         case -1: {
-                            std::cout << "\n Regresando al menu productos!!";
+                            std::cout << "\n Regresando al menu productos\n!!";
                             break;
 
                         }
@@ -223,6 +222,7 @@ void descuentos() {
 
                 }
                 while (OpcionProducto != -1 );
+                break;
             }
             case 2: {
                 //Total sin descuento
@@ -289,19 +289,14 @@ void descuentos() {
                 std::cout << "\nLeche: " << unidadesLeche << " Subtotal: $" << subTotalLeche << std::endl;
                 std::cout << "\n Total sin descuento: " << totalSinDescuento << std::endl;
                 std::cout << "\nPrecio total: " << precioTotal << std::endl;
-
                 break;
 
 
 
 
-
-
-
-
-
-
-
+            }
+            case -1:{
+              break;
             }
         }
 
@@ -348,8 +343,8 @@ void ascedente(int& numero) {
         std::cout << "Digite el numero No: " << i+1 <<std::endl;
         std::cin >> NumeroActual;
         if (NumeroActual < numeroAnterior) {
-            std::cout << "\n !Error! El numero que acabas de ingresar no es mayor, que el numero anterior digitado" << NumeroActual;
-            std::cout << "La secuencia se ha roto, intentalo de nuevo";
+            std::cout << "\n !Error! El numero que acabas de ingresar no es mayor, que el numero  digitado fue: " << NumeroActual;
+            std::cout << "\nLa secuencia se ha roto, intentalo de nuevo\n";
             return;
         }
         numerosGuardados.push_back(NumeroActual);
@@ -443,7 +438,7 @@ void calificaciones( float& CantidadNotas){
         std::cin >> NotaActual;
         SumaNotas += NotaActual;
 
-        if (NotaActual > 3.0){
+        if (NotaActual >= 3.0){
 
             Aprobados++;
         }else
